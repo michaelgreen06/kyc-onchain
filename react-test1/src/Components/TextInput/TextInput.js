@@ -12,6 +12,7 @@ const TextInput = () => {
       <div className="measure center">
         <input
           id="wallet address"
+          placeholder="enter your ethereum wallet address here"
           className="input-reset ba b--black-20 pa2 mb2 db w-100"
           type="text"
           aria-describedby="name-desc"

@@ -1,6 +1,8 @@
 import './App.css';
+import Button from './Components/Button/Button';
 import Logo from './Components/Logo';
 import Step from './Components/Step/Step';
+import StepInfo from './Components/StepInfo/StepInfo';
 import TextInput from './Components/TextInput/TextInput';
 
 function App() {
@@ -13,9 +15,13 @@ function App() {
         <div className="mb4">
           <Step />
         </div>
+        <div>
+          <StepInfo />
+        </div>
         <div className="mt4">
           <TextInput />
         </div>
+        <Button />
       </div>
     </div>
   );
