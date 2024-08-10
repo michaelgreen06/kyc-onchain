@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Step = () => {
+const Step = ({ currentStep }) => {
   return (
     <div>
-      <h1 className="f3 white">Step</h1>
+      <h1 className="f3 white">Step {`${currentStep}`}</h1>
     </div>
   );
 };
