@@ -7,17 +7,23 @@ import StepInfo from './Components/StepInfo/StepInfo';
 import AddressInput from './Components/AddressInput/AddressInput';
 
 function App() {
-  const [walletAddress, setWalletAddress] = useState('');
   const [currentStep, setCurrentStep] = useState(1);
+  const [walletAddress, setWalletAddress] = useState('');
   const handleWalletInput = (e) => {
     setWalletAddress(e.target.value.toLowerCase());
   };
 
   const handleSubmit = () => {
+    setCurrentStep(2);
     console.log('handleSubmit called');
     localStorage.setItem('storedValue', walletAddress);
     console.log(walletAddress, 'stored in local memory');
-    setCurrentStep(2);
+    console.log('current step', currentStep);
+  };
+
+  const handleKYC = () => {
+    setCurrentStep(3);
+    console.log('am I actually devvvvvving?!');
   };
 
   return (
@@ -30,7 +36,7 @@ function App() {
           <Step currentStep={currentStep} />
         </div>
         <div>
-          <StepInfo />
+          <StepInfo currentStep={currentStep} />
         </div>
         {currentStep === 1 && (
           <>
@@ -42,8 +48,13 @@ function App() {
             </div>
           </>
         )}
-
-        <Button handleSubmit={handleSubmit} />
+        {(currentStep === 1 || currentStep === 2) && (
+          <Button
+            handleSubmit={handleSubmit}
+            handleKYC={handleKYC}
+            currentStep={currentStep}
+          />
+        )}
       </div>
     </div>
   );
