@@ -4,7 +4,7 @@ const Button = ({ handleSubmit, currentStep, handleKYC }) => {
   return (
     <input
       type="submit"
-      value={currentStep === 1 ? 'Submit' : ''}
+      value={currentStep === 1 ? 'Submit' : 'Verify your Identity'}
       name="submit"
       onClick={currentStep === 1 ? handleSubmit : handleKYC}
       className="bg-white pa3 hover grow pointer"

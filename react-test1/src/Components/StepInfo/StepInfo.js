@@ -17,13 +17,16 @@ const StepInfo = ({ currentStep }) => {
           </h1>
         </div>
       ) : (
-        <div>
-          <h1 className="f5 white">
-            Your identity has been successfully verified!
-          </h1>
+        <div className="f5 white">
+          <h1>Your identity has been successfully verified!</h1>
           <p>
-            You can see your KYC attestation
-            <a href="https://easscan.org">here</a>
+            You can see your KYC attestation&nbsp;
+            <a
+              className="white"
+              href="https://sepolia.easscan.org/attestation/view/0xfc9a3418b27f55f897faf0a96ba126ef8869aa445ded46c75ef1254725fecb2b"
+            >
+              here
+            </a>
           </p>
           <p>You may now use any dApp that accepts our KYC attestations.</p>
         </div>

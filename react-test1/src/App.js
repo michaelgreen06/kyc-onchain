@@ -5,6 +5,8 @@ import Logo from './Components/Logo';
 import Step from './Components/Step/Step';
 import StepInfo from './Components/StepInfo/StepInfo';
 import AddressInput from './Components/AddressInput/AddressInput';
+import LoadingBar from './Components/LoadingBar/LoadingBar';
+import Results from './Components/Results/Results';
 
 function App() {
   const [currentStep, setCurrentStep] = useState(1);
@@ -23,7 +25,10 @@ function App() {
 
   const handleKYC = () => {
     setCurrentStep(3);
-    console.log('am I actually devvvvvving?!');
+  };
+
+  const handleLoadComplete = () => {
+    setCurrentStep(4);
   };
 
   return (
@@ -55,6 +60,10 @@ function App() {
             currentStep={currentStep}
           />
         )}
+        {currentStep === 3 && (
+          <LoadingBar handleLoadComplete={handleLoadComplete} />
+        )}
+        <>{currentStep === 4 && <Results />}</>
       </div>
     </div>
   );
