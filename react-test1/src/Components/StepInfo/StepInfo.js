@@ -24,6 +24,8 @@ const StepInfo = ({ currentStep }) => {
             <a
               className="white"
               href="https://sepolia.easscan.org/attestation/view/0xfc9a3418b27f55f897faf0a96ba126ef8869aa445ded46c75ef1254725fecb2b"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               here
             </a>
